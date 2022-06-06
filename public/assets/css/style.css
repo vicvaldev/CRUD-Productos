@@ -1,11 +1,12 @@
 :root{
-    --color-bg-body:#017548;
-    --color-bg-menu:#01AE5F;
+    --color-Primary:#017548;
+    --color-sec:#01AE5F;
+    --color-bg-body:#f2f2f2;
+    --color-bg-form:#ffffff;
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
 
 body {
-    background-color: #f2f2f2;
+    background-color: var(--color-bg-body);
 }
 .nav-link{
     color: #fff !important;
@@ -14,9 +15,8 @@ body {
     color: #fff !important;
 }
 
-
 .bg-form{
-    background-color: #ffffff;
+    background-color: var(--color-bg-form);
     padding: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 15px;
@@ -26,7 +26,7 @@ body {
     margin-top: 20%;}
 
 footer{
-    background-color: #ffffff;
+    background-color: var(--color-bg-form);
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -37,7 +37,7 @@ footer{
 /*Glitch Effect*/
 
 .glitch {
-    color: #017548;
+    color: var(--color-bg-body);
     font-size: 100px;
     position: relative;
     width: 800px;
@@ -52,8 +52,8 @@ footer{
     left: 16px;
     text-shadow: -1px 0 rgb(26, 11, 236);
     top: 0;
-    color: #017548;
-    background: #05a455;
+    color: var(--color-Primary);
+    background: var(--color-sec);
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim 2s infinite linear alternate-reverse;
@@ -65,8 +65,8 @@ footer{
     left: 8px;
     text-shadow: 1px 0 rgb(176, 31, 179);
     top: 0;
-    color: #017548;
-    background: #05a455;
+    color: var(--color-Primary);
+    background: var(--color-sec);
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim-2 3s infinite linear alternate-reverse;
