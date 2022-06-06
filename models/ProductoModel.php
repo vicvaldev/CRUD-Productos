@@ -23,9 +23,9 @@ Class ProductoModel{
             $sql = "INSERT INTO productos (nombre, precio, categoria) VALUES ('".$nombre."', '".$precio."', '".$categoria."')";
             $result = $mysqli->query($sql);
             if($result){
-                echo "Producto agregado correctamente";
+                echo "<div class='alert alert-success my-4' id='alert' role='alert'>Producto agregado correctamente</div>";
             }else{
-                echo "Error al agregar el producto";
+                echo "<div class='alert alert-danger my-4' id='alert' role='alert'>Error al agregar el producto</div>";
             }
     }
 
@@ -39,9 +39,9 @@ Class ProductoModel{
             $sql = "UPDATE productos SET nombre = '".$nombre."', precio = '".$precio."', categoria = '".$categoria."' WHERE id = '".$_POST['editid']."'";
             $result = $mysqli->query($sql);
             if($result){
-                echo "Producto editado correctamente";
+                echo "<div class='alert alert-warning my-4' id='alert' role='alert'>Producto editado correctamente</div>";
             }else{
-                echo "Error al editar el producto";
+                echo "<div class='alert alert-danger my-4'  id='alert' role='alert'>Error al editar el producto</div>";
             }
     }
 
@@ -52,9 +52,9 @@ Class ProductoModel{
             $sql = "DELETE FROM productos WHERE id = '".$_POST['delid']."'";
             $result = $mysqli->query($sql);
             if($result){
-                echo "Producto eliminado correctamente";
+                echo "<div class='alert alert-dark my-4' id='alert'role='alert'>Producto eliminado correctamente</div>";
             }else{
-                echo "Error al eliminar el producto";
+                echo "<div class='alert alert-danger my-4' id='alert' role='alert'>Error al eliminar el producto</div>";
             }
     }
 }
