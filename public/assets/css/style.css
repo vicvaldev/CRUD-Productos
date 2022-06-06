@@ -37,7 +37,7 @@ footer{
 /*Glitch Effect*/
 
 .glitch {
-    color: var(--color-bg-body);
+    color: var(--color-Primary);
     font-size: 100px;
     position: relative;
     width: 800px;
@@ -53,7 +53,7 @@ footer{
     text-shadow: -1px 0 rgb(26, 11, 236);
     top: 0;
     color: var(--color-Primary);
-    background: var(--color-sec);
+    background: var(--color-bg-form);
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim 2s infinite linear alternate-reverse;
@@ -66,7 +66,7 @@ footer{
     text-shadow: 1px 0 rgb(176, 31, 179);
     top: 0;
     color: var(--color-Primary);
-    background: var(--color-sec);
+    background: var(--color-bg-form);
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim-2 3s infinite linear alternate-reverse;
