@@ -1,5 +1,6 @@
 <?php
 Class ProductoModel{
+
     public function getProductos(){
         require_once '../config/database.php';
         $db = new Conectar();
@@ -12,51 +13,7 @@ Class ProductoModel{
         }
         return $listaProductos;
     }
-
-    public static function getProducto(){
-        require_once '../config/database.php';
-        $db = new Conectar();
-        $mysqli = $db->conexion();
-
-        $tabla_productos = "";
-        $sql = "SELECT * FROM productos";
-
-        if(isset($_POST['productos'])){
-            $q = $db->conexion()->real_escape_string($_POST['productos']);
-
-            $sql = "SELECT * FROM productos WHERE nombre LIKE '%".$q."%' OR
-            precio LIKE '%".$q."%' OR
-            categoria LIKE '%".$q."%' OR
-            id LIKE '%".$q."%'";
-
-            return "que esta pasando";
-        }
-
-        $tabla_default = $mysqli->query($sql);
-        // if($tabla_default -> num_rows > 0){
-        //     $tabla_productos .= '<thead>
-        //                             <tr>
-        //                             <th scope="col">#</th>
-        //                             <th scope="col">Nombre</th>
-        //                             <th scope="col">Precio</th>
-        //                             <th scope="col">Categoria</th>
-        //                             </tr>
-        //                         </thead>';
-
-        //     while($p = $tabla_default->fetch_assoc()){
-        //         $tabla_productos .= '<tr>
-        //                                 <td>'.$p['id'].'</td>
-        //                                 <td>'.$p['nombre'].'</td>
-        //                                 <td>'.$p['precio'].'</td> 
-        //                                 <td>'.$p['categoria'].'</td>
-        //                             </tr>';
-        //     }
-        //     return $tabla_productos;
-        // }else{
-        //     return "No se encontraron registros con sus criterios de busqueda";
-        // }
-    }
-
+    
     public static function addProductos(){
         require_once '../config/database.php';
             $nombre = $_POST['addnombre'];
